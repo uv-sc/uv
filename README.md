@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>UVScarpers</title>
-</head>
 <body>
 
 <h1>UVScarpers</h1>
