@@ -23,8 +23,9 @@ jobs:
           
           # Commit and push to target
           cd target
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+
+          git config user.name "uv-sc"
+          git config user.email "176760857+uv-sc@users.noreply.github.com"
           git add .
-          git commit -m "Sync from ${SOURCE_REPO}" || echo "No changes"
+          git commit -m "New version ..." || echo "No changes"
           git push origin main
