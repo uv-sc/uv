@@ -1,0 +1,30 @@
+name: Sync to Remote Repo
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync repositories
+        env:
+          TARGET_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
+          SOURCE_REPO: ${{ github.repository }}
+        run: |
+          # Clone source repo
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${SOURCE_REPO}.git source
+          
+          # Clone target repo
+          git clone https://x-access-token:${TARGET_TOKEN}@github.com/uv-sc/uv.git target
+          
+          # Copy files from source to target
+          rsync -av --exclude='.git' source/ target/
+          
+          # Commit and push to target
+          cd target
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Sync from ${SOURCE_REPO}" || echo "No changes"
+          git push origin main
