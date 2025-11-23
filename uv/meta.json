@@ -1,9 +1,8 @@
 {
   "author": "asdfg",
-  "version": "0.27",
+  "version": "0.28",
   "name": "uvScrapers",
   "update_directory": "https://raw.githubusercontent.com/uv-sc/uv/main/uv/",
   "remote_meta": "https://raw.githubusercontent.com/uv-sc/uv/main/uv/meta.json",
   "seren_version": "3.0.0"
-
 }
