@@ -1,8 +1,17 @@
 {
   "author": "asdfg & BC",
-  "version": "0.38",
+  "version": "0.40",
   "name": "uvScrapers",
   "update_directory": "https://raw.githubusercontent.com/uv-sc/uv/main/uv/",
   "remote_meta": "https://raw.githubusercontent.com/uv-sc/uv/main/uv/meta.json",
-  "seren_version": "3.0.0"
+  "seren_version": "3.0.0",
+  "settings": [
+    {
+      "id": "debug",
+      "type": "bool",
+      "default": false,
+      "visible": true,
+      "label": "Debug"
+    }
+  ]
 }
