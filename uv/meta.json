@@ -1,6 +1,6 @@
 {
   "author": "asdfg & BC",
-  "version": "0.43",
+  "version": "0.44",
   "name": "uvScrapers",
   "update_directory": "https://raw.githubusercontent.com/uv-sc/uv/main/uv/",
   "remote_meta": "https://raw.githubusercontent.com/uv-sc/uv/main/uv/meta.json",
@@ -10,8 +10,15 @@
       "id": "debug",
       "type": "bool",
       "default": false,
-      "visible": true,
+      "visible": false,
       "label": "Debug"
+    },
+    {
+      "id": "usenetstreamer_url",
+      "type": "str",
+      "default": "",
+      "visible": true,
+      "label": "UsenetStreamerURL"
     }
   ]
 }
